@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  go-login-exmaple:
+    build:
+      context: .
+      target: base
+    command: air
+    env_file:
+      - .env
+    ports:
+      - ${PORT}:8080
+    volumes:
+      - .:/app
